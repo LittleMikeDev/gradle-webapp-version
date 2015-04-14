@@ -9,8 +9,9 @@ dependencies {
     compile localGroovy()
 }
 
-version = "0.1"
+version = "0.2"
 group = "uk.co.littlemike"
+sourceCompatibility = 1.8
 
 pluginBundle {
     website = 'https://github.com/LittleMikeDev/gradle-webapp-version'

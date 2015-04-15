@@ -16,7 +16,8 @@ class WebappVersionPlugin implements Plugin<Project> {
             writeVersionFile(fileLocation, generateVersionJson(versionInfo))
         }
 
-        project.war.dependsOn 'generate-version-json'
+        project.apply(plugin: 'war')
+        project.war.dependsOn('generate-version-json')
         project.war {
             from fileLocation
             include FILENAME

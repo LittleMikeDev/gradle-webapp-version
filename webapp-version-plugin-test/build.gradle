@@ -4,5 +4,4 @@ buildscript {
     }
 }
 
-apply plugin: 'war'
 apply plugin: 'uk.co.littlemike.webapp-version-plugin'

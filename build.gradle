@@ -1,28 +1,4 @@
-plugins {
-    id "com.gradle.plugin-publish" version "0.9.0"
-}
-
-apply plugin: 'groovy'
-
-dependencies {
-    compile gradleApi()
-    compile localGroovy()
-}
-
-version = "0.2"
-group = "uk.co.littlemike"
-sourceCompatibility = 1.8
-
-pluginBundle {
-    website = 'https://github.com/LittleMikeDev/gradle-webapp-version'
-    vcsUrl = 'https://github.com/LittleMikeDev/gradle-webapp-version.git'
-    description = 'Plugin for baking a static version page into a webapp'
-    tags = ['webapp', 'version', 'json']
-
-    plugins {
-        greetingsPlugin {
-            id = 'uk.co.littlemike.webapp-version-plugin'
-            displayName = 'Gradle webapp version plugin'
-        }
-    }
+allprojects {
+    version = "0.2"
+    group = "uk.co.littlemike"
 }

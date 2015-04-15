@@ -1,0 +1,8 @@
+buildscript {
+    dependencies {
+        classpath project(':webapp-version-plugin')
+    }
+}
+
+apply plugin: 'war'
+apply plugin: 'uk.co.littlemike.webapp-version-plugin'

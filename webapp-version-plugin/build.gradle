@@ -16,7 +16,7 @@ pluginBundle {
     tags = ['webapp', 'version', 'json']
 
     plugins {
-        greetingsPlugin {
+        webappVersionPlugin {
             id = 'uk.co.littlemike.webapp-version-plugin'
             displayName = 'Gradle webapp version plugin'
         }

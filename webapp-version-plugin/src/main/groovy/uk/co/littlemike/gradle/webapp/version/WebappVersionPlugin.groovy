@@ -10,10 +10,11 @@ class WebappVersionPlugin implements Plugin<Project> {
     void apply(Project project) {
         File fileLocation = new File(project.buildDir, 'webapp-version');
 
+        project.apply(plugin: 'uk.co.littlemike.build-version-plugin')
         project.task('generate-version-json') << {
-            VersionInfo versionInfo = getBuildVersionInfo()
-            versionInfo.version = project.version
-            writeVersionFile(fileLocation, generateVersionJson(versionInfo))
+            writeVersionFile(fileLocation, new VersionInfo(
+                    buildInfo: project.buildInfo,
+                    projectVersion: project.version))
         }
 
         project.apply(plugin: 'war')
@@ -24,19 +25,10 @@ class WebappVersionPlugin implements Plugin<Project> {
         }
     }
 
-    VersionInfo getBuildVersionInfo() {
-        new VersionInfo()
-    }
-
-    String generateVersionJson(VersionInfo versionInfo) {
-        getClass().getResourceAsStream('version.json').text
-                .replace('@version@', versionInfo.version)
-    }
-
-    void writeVersionFile(File location, String json) {
+    void writeVersionFile(File location, VersionInfo versionInfo) {
         location.mkdirs();
         File file = new File(location, FILENAME)
         file.delete()
-        file << json
+        file << versionInfo.asJson()
     }
 }

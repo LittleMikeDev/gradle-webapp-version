@@ -1,4 +1,4 @@
 allprojects {
-    version = "0.4"
+    version = "0.5"
     group = "uk.co.littlemike"
 }

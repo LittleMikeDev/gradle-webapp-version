@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-if ./gradlew --stacktrace build ; then
-    ./gradlew --stacktrace --settings-file=test-settings.gradle webapp-version-plugin-test:build
+if ./gradlew --stacktrace clean build ; then
+    ./gradlew --stacktrace --settings-file=test-settings.gradle webapp-version-plugin-test:clean webapp-version-plugin-test:build
 fi

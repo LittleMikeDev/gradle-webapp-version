@@ -9,22 +9,10 @@ Supported CI systems
 
 * TeamCity
 
-Requirements
-------------
-
-Compiled for use with Java 8+
-
 How to use
 ----------
 
-Apply the plugin (Gradle 2.1+)
-
-
-```
-plugins {
-    id "uk.co.littlemike.webapp-version-plugin" version "0.3"
-}
-```
+[Apply the plugin](https://plugins.gradle.org/plugin/uk.co.littlemike.webapp-version-plugin)
 
 A `version.json` file with the following format will be included in the root of your .war file. Note that the `"version"`
 is taken from the `project.version` property at the moment the `war` task is called.

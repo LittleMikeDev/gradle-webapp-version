@@ -25,3 +25,5 @@ is taken from the `project.version` property at the moment the `war` task is cal
     "revision": "0a4f58f9dd476d8a28737e51a46d3eab0ce9e288"
 }
 ```
+
+The build information follows the format from the [gradle-build-version plugin](https://github.com/LittleMikeDev/gradle-build-version)

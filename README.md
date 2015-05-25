@@ -1,6 +1,9 @@
 Gradle webapp version plugin
 ============================
 
+[![Build Status](https://travis-ci.org/LittleMikeDev/gradle-webapp-version.svg?branch=master)](https://travis-ci.org/LittleMikeDev/gradle-webapp-version)
+[![codecov.io](http://codecov.io/github/LittleMikeDev/gradle-webapp-version/coverage.svg?branch=master)](http://codecov.io/github/LittleMikeDev/gradle-webapp-version?branch=master)
+
 This plugin builds a static `version.json` file containing project build & version information and includes it in the
 .war distributable.
 

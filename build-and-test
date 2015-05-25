@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-if ./gradlew --stacktrace clean build ; then
+if ./gradlew --stacktrace clean build jacocoTestReport; then
     ./gradlew --stacktrace --settings-file=test-settings.gradle webapp-version-plugin-test:clean webapp-version-plugin-test:build
 fi

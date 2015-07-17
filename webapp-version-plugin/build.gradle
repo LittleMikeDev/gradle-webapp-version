@@ -40,8 +40,8 @@ pluginBundle {
  * This can be removed when https://issues.gradle.org/browse/GRADLE-3273 is resolved
  */
 task setupPluginUpload << {
-    def key = System.getenv('gradle.publish.key')
-    def secret = System.getenv('gradle.publish.secret')
+    def key = System.getenv('gradlePublishKey')
+    def secret = System.getenv('gradlePublishSecret')
 
     if( !key || !secret) {
         throw new RuntimeException("gradlePublishKey and/or gradlePublishSecret are not defined environment variables")

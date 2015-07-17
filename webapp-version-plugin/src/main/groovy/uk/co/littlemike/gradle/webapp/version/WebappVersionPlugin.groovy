@@ -20,8 +20,9 @@ class WebappVersionPlugin implements Plugin<Project> {
         project.apply(plugin: 'war')
         project.war.dependsOn('generate-version-json')
         project.war {
-            from fileLocation
-            include FILENAME
+            from(fileLocation) {
+                include FILENAME
+            }
         }
     }
 

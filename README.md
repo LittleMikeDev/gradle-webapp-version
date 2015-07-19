@@ -10,6 +10,7 @@ This plugin builds a static `version.json` file containing project build & versi
 Supported CI systems
 --------------------
 
+* Travis-CI
 * TeamCity
 * Thoughtworks GO
 
